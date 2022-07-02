@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "shadowbyte",
-    "slug": "shadowbyte",
-    "version": "0.0.1",
+    "name": "readme",
+    "slug": "readme",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -23,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.shadowbytee.readme"
     },
     "web": {
       "favicon": "./assets/favicon.png"
