@@ -1,36 +1,35 @@
+import 'react-native-gesture-handler';
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
+import 'react-native-gesture-handler'
 
 import {
-  useFonts as useOswald,
-  Oswald_400Regular,
-} from "@expo-google-fonts/oswald";
-import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
+  useFonts as useSignikaNegative,
+  SignikaNegative_400Regular,
+} from "@expo-google-fonts/signika-negative";
 
 import { theme } from "./src/infrastructure/theme";
 import { Navigation } from "./src/infrastructure/navigation";
 
 export default function App() {
   // Load Fonts
-  const [oswaldLoaded] = useOswald({
-    Oswald_400Regular,
+  const [signikaNegativeLoaded] = useSignikaNegative({
+    SignikaNegative_400Regular,
   });
 
-  const [latoLoaded] = useLato({
-    Lato_400Regular,
-  });
 
-  if (!oswaldLoaded || !latoLoaded) {
+  if (!signikaNegativeLoaded) {
     return null;
   }
 
   return (
     <>
       <ThemeProvider theme={theme}>
-            <Navigation />
+        <Navigation />
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
   );
 }
+
