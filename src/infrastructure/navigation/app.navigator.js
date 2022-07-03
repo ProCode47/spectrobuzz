@@ -30,7 +30,7 @@ const createScreenOptions = ({ route }) => {
       <Feather name={"headphones"} size={size} color={color} />
     ),
     headerShown: false,
-      "tabBarActiveTintColor": `${ route.name === 'White' ? "white" : route.name === "Pink" ? "pink" : "brown"}`,
+      "tabBarActiveTintColor": `${ route.name === 'White' ? "white" : route.name === "Pink" ? "#FFC0CB" : "#964B00"}`,
       "tabBarInactiveTintColor": "gray",
       "tabBarStyle": [
         {

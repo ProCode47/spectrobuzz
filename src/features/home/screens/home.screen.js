@@ -4,17 +4,18 @@ import { Feather, Ionicons } from "@expo/vector-icons";
 import { Text } from "../../../components/text";
 import { Spacer } from "../../../components/spacer";
 import { Header, MenuIcon } from "../components/home.styles";
-import {LinearGradient} from 'expo-linear-gradient';
+import { LinearGradient } from "expo-linear-gradient";
 import { View } from "react-native";
-
+import Circles from "../components/circles";
 
 export default function HomeScreen({ route }) {
   const BG_COLOR = {
-    White: "white",
-    Brown: "brown",
-    Pink:"pink"
-  }
-  const hue = BG_COLOR[route.name]
+    White: "#FFFFFF",
+    Brown: "#964B00",
+    Pink: "#FFC0CB",
+  };
+  const hue = BG_COLOR[route.name];
+
   return (
     <SafeArea>
       {/* <Header>
@@ -24,14 +25,18 @@ export default function HomeScreen({ route }) {
         </Text>
       </Header> */}
       <View>
-      <LinearGradient
+        <LinearGradient
           colors={[`${hue}`, "#1D1A36"]}
-          locations={[0, 0.85]}
+          locations={[0, 0.15]}
           style={{
-            height:"100%"
+            height: "100%",
           }}
         >
-         
+          <View
+            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+          >
+            <Circles hue={hue} />
+          </View>
         </LinearGradient>
       </View>
     </SafeArea>
