@@ -5,15 +5,14 @@ import { colors } from "../../../infrastructure/theme/colors";
 import { Card, Searchbar } from "react-native-paper";
 
 export const Header = styled.View`
-  background-color: ${(props) => props.theme.colors.bg.primary};
+  background-color: #1D1A36;
   height: 60px;
-  padding: 10px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  padding-left: 10px;
+  flex-direction:row;
+  align-items:center;
 `;
 export const MenuIcon = styled(Feather).attrs({
   name: "menu",
   size: 20,
-  color: colors.brand.primary,
+  color: "#FFF",
 })``;
