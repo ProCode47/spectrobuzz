@@ -16,3 +16,13 @@ export const MenuIcon = styled(Feather).attrs({
   size: 20,
   color: "#FFF",
 })``;
+export const PlayIcon = styled(Feather).attrs({
+  name: "play",
+  size: 50,
+  color: "#FFF",
+})``;
+export const PauseIcon = styled(Feather).attrs({
+  name: "pause",
+  size: 50,
+  color: "#FFF",
+})``;

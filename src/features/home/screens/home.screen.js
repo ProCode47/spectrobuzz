@@ -8,6 +8,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { View } from "react-native";
 import Circles from "../components/circles";
 import { Navigation } from "../../../infrastructure/navigation";
+import Sounds from "../components/sounds";
 
 export default function HomeScreen({ navigation, route }) {
   const BG_COLOR = {
@@ -16,7 +17,7 @@ export default function HomeScreen({ navigation, route }) {
     Pink: "#FFC0CB",
     Blue: "#0000FF",
     Violet: "#8F00FF",
-    Grey:"#808080"
+    Grey: "#808080",
   };
   const hue = BG_COLOR[route.name];
 
@@ -28,21 +29,19 @@ export default function HomeScreen({ navigation, route }) {
           <Text>Explore More</Text>
         </Spacer>
       </Header>
-      <View>
-        <LinearGradient
-          colors={[`${hue}`, "#1D1A36"]}
-          locations={[0, 0.01]}
-          style={{
-            height: "100%",
-          }}
-        >
-          <View
-            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-          >
-            <Circles hue={hue} />
-          </View>
-        </LinearGradient>
-      </View>
+      <LinearGradient
+        colors={[`${hue}`, "#1D1A36"]}
+        locations={[0, 0.01]}
+        style={{
+          height: "100%",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Circles hue={hue} />
+        <Sounds />
+      </LinearGradient>
     </SafeArea>
   );
 }
