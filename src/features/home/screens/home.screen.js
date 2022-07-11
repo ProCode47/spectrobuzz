@@ -40,7 +40,7 @@ export default function HomeScreen({ navigation, route }) {
         }}
       >
         <Circles hue={hue} />
-        <Sounds />
+        <Sounds hue={route.name.toLowerCase()} />
       </LinearGradient>
     </SafeArea>
   );

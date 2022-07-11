@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
 import { Audio } from "expo-av";
 import { PauseIcon, PlayIcon } from "./home.styles";
 
 
-export default function Sounds() {
+export default function Sounds({hue}) {
   const [sound, setSound] = useState();
   const [isPlaying, setIsPlaying] = useState(false);
+  const color = useRef();
+  useEffect(() => {
+    const tabColor = `./${hue}.mp3`
+    console.log(`./${hue}.mp3`)
+    color.current = tabColor
+  },[])
 
   async function handleSound() {
     if (isPlaying) {
@@ -16,7 +22,7 @@ export default function Sounds() {
 
     } else {
       console.log("Loading Sound");
-      const { sound } = await Audio.Sound.createAsync(require("./white.mp3"));
+      const { sound } = await Audio.Sound.createAsync(require(`./white.mp3`));
       setSound(sound);
       console.log("Playing Sound");
       setIsPlaying(true);
