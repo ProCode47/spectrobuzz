@@ -19,22 +19,22 @@ export default function Sounds({ hue, color }) {
       let soundObject
       switch (hue) {
         case "white":
-          soundObject = await Audio.Sound.createAsync(require(`./white.mp3`));
+          soundObject = await Audio.Sound.createAsync(require(`../assets/white.mp3`));
           break;
         case "pink":
-          soundObject = await Audio.Sound.createAsync(require(`./pink.mp3`));
+          soundObject = await Audio.Sound.createAsync(require(`../assets/pink.mp3`));
           break;
         case "brown":
-          soundObject = await Audio.Sound.createAsync(require(`./brown.mp3`));
+          soundObject = await Audio.Sound.createAsync(require(`../assets/brown.mp3`));
           break;
         case "blue":
-          soundObject = await Audio.Sound.createAsync(require(`./blue.mp3`));
+          soundObject = await Audio.Sound.createAsync(require(`../assets/blue.mp3`));
           break;
         case "violet":
-          soundObject = await Audio.Sound.createAsync(require(`./violet.mp3`));
+          soundObject = await Audio.Sound.createAsync(require(`../assets/violet.mp3`));
           break;
         case "grey":
-          soundObject = await Audio.Sound.createAsync(require(`./gray.mp3`));
+          soundObject = await Audio.Sound.createAsync(require(`../assets/gray.mp3`));
           break;
 
         default:

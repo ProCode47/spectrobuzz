@@ -6,12 +6,14 @@ import { Text, View, Button } from "react-native";
 import { SafeArea } from "../../utility/safe-area";
 import { PrimaryNavigator } from "./primary.navigator";
 import { SecondaryNavigator } from "./secondary.navigator";
+import Credits from "../../features/home/screens/credits.screen";
 
 const Drawer = createDrawerNavigator();
 
 const TAB_ICON = {
   "Primary Hues": "color-filter",
   "Secondary Hues": "color-palette",
+  "Credits": "code",
 };
 
 const createScreenOptions = ({ route }) => {
@@ -39,6 +41,7 @@ export const AppNavigator = () => (
     >
       <Drawer.Screen component={PrimaryNavigator} name="Primary Hues" />
       <Drawer.Screen component={SecondaryNavigator} name="Secondary Hues" />
+      <Drawer.Screen component={Credits} name="Credits" />
     </Drawer.Navigator>
   </NavigationContainer>
 );

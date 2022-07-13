@@ -9,6 +9,7 @@ import { View } from "react-native";
 import Circles from "../components/circles";
 import { Navigation } from "../../../infrastructure/navigation";
 import Sounds from "../components/sounds";
+import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 
 export default function HomeScreen({ navigation, route }) {
   const BG_COLOR = {
@@ -24,10 +25,12 @@ export default function HomeScreen({ navigation, route }) {
   return (
     <SafeArea>
       <Header>
-        <MenuIcon onPress={() => navigation.openDrawer()} />
+        <Pressable style={{flexDirection:"row"}} onPress={() => navigation.openDrawer()}>
+          <MenuIcon/>
         <Spacer position="left" size="large">
           <Text>Explore More</Text>
         </Spacer>
+        </Pressable>
       </Header>
       <LinearGradient
         colors={[`${hue}`, "#1D1A36"]}

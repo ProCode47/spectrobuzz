@@ -11,8 +11,26 @@ export const Header = styled.View`
   flex-direction:row;
   align-items:center;
 `;
+export const CreditsHeader = styled.View`
+  background-color: #1D1A36;
+  height: 60px;
+  flex-direction:row;
+  padding:15px;
+  align-items:center;
+  justify-content:space-between;
+`;
 export const MenuIcon = styled(Feather).attrs({
   name: "menu",
+  size: 20,
+  color: "#FFF",
+})``;
+export const BackIcon = styled(Feather).attrs({
+  name: "chevron-left",
+  size: 20,
+  color: "#FFF",
+})``;
+export const EditIcon = styled(Feather).attrs({
+  name: "edit",
   size: 20,
   color: "#FFF",
 })``;
