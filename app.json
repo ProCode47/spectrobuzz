@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "spectrobuzz",
-    "slug": "spectrobuzz",
+    "name": "Spectrobuzz",
+    "slug": "Spectrobuzz-V2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
